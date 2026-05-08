@@ -7,32 +7,56 @@
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">KARAMOJA <span>CONNECT</span></a>
+        <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="KC Logo"> <div class="logo-text">KARAMOJA <span>CONNECT</span></div>
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="mission.html">Missions</a></li>
             <li><a href="gallery.html">Gallery</a></li>
         </ul>
     </nav>
 
-    <section style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=1200&q=80'); background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
-        <div>
-            <h1 style="font-size: 3rem;">Connecting Youth to Christ</h1>
-            <p style="margin: 20px 0; font-size: 1.2rem;">Physical Connection • Church Connection • Christ Connection</p>
-            <a href="https://meet.google.com/tie-doxh-evb" class="btn btn-meet">Join Fellowship: Thu 8pm-9pm</a>
+    <header class="hero">
+        <div class="container">
+            <h1>Spreading the Love of Christ</h1>
+            <p>A Born-Again Anglican Youth Ministry dedicated to the spiritual restoration of Karamoja by changing it for Jesus "KARAMOJA FOR JESUS".</p>
+            <div style="margin-top: 25px;">
+                <a href="#register" class="btn btn-orange">Join the Connect</a>
+                <a href="https://meet.google.com/tie-doxh-evb" class="btn" style="background: #2ecc71; color: white; margin-left: 10px;">Weekly Fellowship (Thu 8pm)</a>
+            </div>
         </div>
-    </section>
+    </header>
 
     <div class="container">
-        <div style="background: var(--deep-brown); color: white; padding: 40px; border-radius: 15px; text-align: center;">
-            <h2 style="color: var(--primary-gold); margin-bottom: 20px;">The Mandate</h2>
-            <p style="font-size: 1.4rem; font-style: italic;">"I will give you a new heart and put a new spirit in you..."</p>
-            <p style="margin-top: 10px;"><strong>Ezekiel 36:24-36</strong></p>
+        <div class="card" style="border-top: 5px solid var(--orange); text-align: center;">
+            <h2 style="margin-bottom: 15px;">The Mandate: Ezekiel 36:24-36</h2>
+            <p style="font-size: 1.3rem; font-style: italic; color: #555;">"I will give you a new heart and put a new spirit in you..."</p>
         </div>
+
+        <section id="register" style="margin-top: 50px; text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Be Part of the Connect</h2>
+            <p style="margin-bottom: 30px;">If you have a heart for ministry and outreach in Karamoja, please register your interest below.</p>
+            
+            <div class="card" style="background: var(--light);">
+                <h3 style="margin-bottom: 15px;">Official Registration</h3>
+                <p style="margin-bottom: 20px;">Complete our Google Form to be added to our mission database.</p>
+                <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="btn btn-orange">Open Registration Form</a>
+                
+                <div style="margin-top: 30px;">
+                    <p><strong>Or Contact Us Directly:</strong></p>
+                    <p style="font-size: 1.2rem; color: var(--must-navy); font-weight: bold; margin-top: 10px;">
+                        +256 778 525 537 | +256 775 378 070
+                    </p>
+                    <p style="font-size: 0.9rem;">Email: nangirosaviour@gmail.com</p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 Karamoja Connect Ministry</p>
+        <p>&copy; 2026 Karamoja Connect | Anglican Youth Ministry</p>
     </footer>
 </body>
 </html>
