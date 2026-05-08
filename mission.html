@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Missions | Karamoja Connect</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Countdown styling for better visibility on all devices */
         .countdown-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin-top: 20px;
             text-align: center;
+            flex-wrap: wrap; /* Allows items to wrap on very small screens */
         }
         .countdown-item {
             background: var(--dark);
@@ -18,6 +21,8 @@
             padding: 15px;
             border-radius: 10px;
             min-width: 80px;
+            flex: 1; /* Makes items take equal space */
+            max-width: 100px;
         }
         .countdown-item span {
             display: block;
@@ -25,12 +30,30 @@
             font-weight: bold;
             color: white;
         }
+        
+        .strategy-list {
+            margin-left: 20px; 
+            margin-top: 15px;
+        }
+        .strategy-list li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .countdown-item {
+                min-width: 65px;
+                padding: 10px;
+            }
+            .countdown-item span {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="nav-logo">
-            <img src="logo.png" alt="KC Logo">
+            <img src="logo.jpeg" alt="KC Logo">
             <div class="logo-text">KARAMOJA <span>CONNECT</span></div>
         </a>
         <ul>
@@ -43,10 +66,10 @@
 
     <div class="container">
         <div class="card" style="border-left: 10px solid var(--orange); position: relative;">
-            <h1 style="color: var(--orange);">Upcoming Mission: Kotido</h1>
+            <h1 style="color: var(--orange); font-size: 1.8rem;">Upcoming Mission: Kotido</h1>
             <h3 style="margin-bottom: 15px;">11th - 14th June 2026</h3>
             
-            <p>Following the successful conclusion of our Namalu Chapter on 1st Feb, we are shifting our focus to Kotido. We plan to connect with 3 parishes annually, and Kotido is our next frontier for the Gospel.</p>
+            <p>Following the successful conclusion of our Namalu Chapter, we are shifting our focus to Kotido. We plan to connect with 3 parishes annually, and Kotido is our next frontier for the Gospel.</p>
             
             <div class="countdown-container" id="timer">
                 <div class="countdown-item"><span id="days">00</span>Days</div>
@@ -55,16 +78,16 @@
             </div>
 
             <div style="margin-top: 30px; text-align: center;">
-                <a href="https://forms.gle/AxJeh4Krtq992szM7" target="_blank" class="btn btn-orange" style="font-size: 1.2rem; padding: 15px 40px;">
-                    Register to Join Kotido Team
+                <a href="https://forms.gle/AxJeh4Krtq992szM7" target="_blank" class="btn btn-orange" style="width: 100%; max-width: 400px;">
+                    Register to Join US
                 </a>
             </div>
         </div>
 
-        <h2 style="margin-top: 50px;">Our Strategy</h2>
+        <h2 style="margin-top: 40px; margin-bottom: 20px;">Our Strategy</h2>
         <div class="card">
             <p>Our mandate is driven by <strong>Ezekiel 36:24-36</strong>. Every mission involves:</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
+            <ul class="strategy-list">
                 <li>Door-to-door youth evangelism.</li>
                 <li>Partnership with local Anglican Parish priests.</li>
                 <li>Physical needs assessment and support.</li>
@@ -79,10 +102,9 @@
     </footer>
 
     <script>
-        // Set the date we're counting down to
+        // Target date: June 11, 2026
         const missionDate = new Date("June 11, 2026 08:00:00").getTime();
 
-        // Update the count down every 1 second
         const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = missionDate - now;
@@ -91,9 +113,12 @@
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
+            // Check if elements exist before updating to prevent errors
+            if(document.getElementById("days")) {
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+            }
 
             if (distance < 0) {
                 clearInterval(x);
