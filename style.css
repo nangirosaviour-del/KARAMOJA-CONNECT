@@ -1,0 +1,47 @@
+:root {
+    --primary-gold: #D4AF37;
+    --deep-brown: #4A3728;
+    --accent-orange: #E67E22;
+    --white: #ffffff;
+    --bg-light: #f9f9f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: var(--bg-light); color: #333; line-height: 1.6; }
+
+/* Navigation */
+nav {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--deep-brown); text-decoration: none; }
+.logo span { color: var(--accent-orange); }
+
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { text-decoration: none; color: var(--deep-brown); font-weight: 600; }
+nav a:hover { color: var(--accent-orange); }
+
+/* Common Layout */
+.container { padding: 60px 10%; max-width: 1200px; margin: auto; }
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-meet { background: #2ecc71; color: white; border: none; }
+.btn-orange { background: var(--accent-orange); color: white; }
+
+footer { background: #222; color: white; text-align: center; padding: 40px; margin-top: 40px; }
